@@ -7,8 +7,8 @@ const App = () => {
   const [bad, setBad] = useState(0)
 
   const getAll = () => good + neutral + bad
-  const getAverage = () => (good - bad) / getAll()
-  const getPositives = () => (good * 100) / getAll()
+  const getAverage = () => getAll()===0 ? 0 : (good - bad) / getAll()
+  const getPositives = () => getAll()===0 ? 0 : (good * 100) / getAll()
   
   return (
     <div>
